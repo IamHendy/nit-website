@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #222;
+}
+
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin: 0 auto 2.5rem;
+}
+
+.section-divider span {
+  height: 3px;
+  width: 60px;
+  background-color: #0d1b4c;
+  display: inline-block;
+}
+
+.section-divider .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background-color: #f5c518;
+}
