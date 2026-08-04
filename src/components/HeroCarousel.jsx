@@ -52,7 +52,7 @@ export default function HeroCarousel() {
           backgroundImage: `linear-gradient(120deg, rgba(13,27,76,0.9), rgba(13,27,76,0.5)), url('${slide.image}')`,
         }}
       />
-      <div className="relative container py-28 md:py-36 text-center flex flex-col items-center">
+      <div className="relative container pt-28 md:pt-36 pb-16 md:pb-20 text-center flex flex-col items-center">
         <h1 className="text-3xl md:text-5xl font-bold max-w-3xl">
           {slide.title}
         </h1>

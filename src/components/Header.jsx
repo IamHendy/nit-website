@@ -74,7 +74,7 @@ export default function Header() {
               alt="Network Intelligence Technologies Limited"
               width={212}
               height={96}
-              className="h-14 w-auto"
+              className="h-20 w-auto"
               priority
             />
           </Link>

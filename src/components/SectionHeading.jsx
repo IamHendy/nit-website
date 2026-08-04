@@ -8,7 +8,7 @@ export default function SectionHeading({ children, light = false }) {
       >
         {children}
       </h2>
-      <div className="section-divider mt-4">
+      <div className="section-divider mt-6">
         <span className={light ? "!bg-white" : ""}></span>
         <span className="dot"></span>
         <span className={light ? "!bg-white" : ""}></span>
