@@ -16,10 +16,10 @@ export default function HomePage() {
       <HeroCarousel />
       <AboutBlock />
 
-      <section className="bg-gray-50 py-20">
+      <section className="bg-navy-mid py-20 md:py-24">
         <div className="container">
-          <SectionHeading>Our Services</SectionHeading>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <SectionHeading light>Our Services</SectionHeading>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-14 items-stretch">
             {SERVICES.map((s) => (
               <ServiceCardSimple
                 key={s.slug}
@@ -27,16 +27,17 @@ export default function HomePage() {
                 title={s.title}
                 text={s.cardText}
                 href={`/services/${s.slug}`}
+                dark
               />
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-14 md:py-16">
         <div className="container">
-          <SectionHeading>Our Solutions</SectionHeading>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-14">
+          <SectionHeading compact>Our Solutions</SectionHeading>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 gap-y-14">
             {[
               ...SOLUTIONS.map((s) => ({
                 href: `/solutions/${s.slug}`,

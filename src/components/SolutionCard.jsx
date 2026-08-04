@@ -8,7 +8,7 @@ export default function SolutionCard({
 }) {
   return (
     <div className="text-left">
-      <h3 className="font-bold text-lg text-gray-900 mb-3 uppercase">
+      <h3 className="font-bold text-lg text-navy mb-3 uppercase">
         {title}
       </h3>
       <p className="text-sm text-gray-600 leading-relaxed mb-4">{text}</p>
