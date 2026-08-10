@@ -16,9 +16,9 @@ export default function HomePage() {
       <HeroCarousel />
       <AboutBlock />
 
-      <section className="bg-navy-mid py-20 md:py-24">
+      <section className="bg-navy-mid pt-10 pb-20 md:pt-14 md:pb-24">
         <div className="container">
-          <SectionHeading light>Our Services</SectionHeading>
+          <SectionHeading light compact>Our Services</SectionHeading>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-14 items-stretch">
             {SERVICES.map((s) => (
               <ServiceCardSimple

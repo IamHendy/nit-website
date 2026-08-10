@@ -11,7 +11,7 @@ export default function ServiceCardSimple({
   return (
     <div className="text-left h-full flex flex-col">
       {image && (
-        <div className="relative w-full h-56 md:h-60 mb-6 rounded-lg overflow-hidden">
+        <div className="relative w-full aspect-square mb-6 rounded-lg overflow-hidden">
           <Image
             src={image}
             alt={title}
