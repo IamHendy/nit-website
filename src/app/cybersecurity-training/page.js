@@ -10,7 +10,7 @@ import CourseCard from "@/components/CourseCard";
 import { COURSES, INSTRUCTORS, TESTIMONIALS, FAQS } from "@/data/courses";
 
 export const metadata = {
-  title: "Cybersecurity & Data Protection Training | Network Intelligence Technologies",
+  title: "Cybersecurity & Data Protection Training | AEGIS School of Science",
   description:
     "Learn practical cybersecurity skills from beginner to professional level with hands-on labs and industry certification prep.",
 };

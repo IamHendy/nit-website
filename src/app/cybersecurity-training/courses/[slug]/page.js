@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Check, Clock, Award, ChevronRight } from "lucide-react";
 import { COURSES, getCourseBySlug, INSTRUCTORS, TESTIMONIALS, FAQS } from "@/data/courses";
+import ModulesGrid from "@/components/ModulesGrid";
 
 export function generateStaticParams() {
   return COURSES.map((c) => ({ slug: c.slug }));
@@ -10,7 +11,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const course = getCourseBySlug(params.slug);
   if (!course) return {};
-  return { title: `${course.title} | Cybersecurity Training` };
+  return { title: `${course.title} | AEGIS School of Science` };
 }
 
 export default function CourseDetailPage({ params }) {
@@ -92,19 +93,7 @@ export default function CourseDetailPage({ params }) {
           {/* Course Modules */}
           <div>
             <h2 className="text-xl font-bold text-gray-900 mb-5">Course Modules</h2>
-            <ol className="space-y-3">
-              {course.modules.map((m, i) => (
-                <li
-                  key={m}
-                  className="flex items-start gap-4 rounded-lg border border-gray-100 bg-gray-50 px-5 py-4"
-                >
-                  <span className="text-navy font-bold shrink-0">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <span className="text-gray-700">{m}</span>
-                </li>
-              ))}
-            </ol>
+            <ModulesGrid modules={course.modules} />
           </div>
 
           {/* Instructor */}

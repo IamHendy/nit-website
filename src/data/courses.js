@@ -1,306 +1,217 @@
 export const COURSES = [
   {
-    slug: "intro-to-cybersecurity",
-    icon: "ShieldCheck",
-    title: "Introduction to Cybersecurity",
+    slug: "pgp-data-science-business-analytics-ai",
+    icon: "BarChart3",
+    title: "PGP in Data Science, Business Analytics & AI",
     shortDescription:
-      "A foundational overview of the cybersecurity landscape — threats, defenses, and the core principles every professional needs.",
-    level: "Beginner",
-    duration: "4 weeks",
-    objectives: [
-      "Understand the CIA triad and core security principles",
-      "Recognize common attack types and threat actors",
-      "Learn the basics of network, endpoint, and application security",
-      "Build a foundation for specialized cybersecurity tracks",
-    ],
-    skills: ["Security fundamentals", "Threat awareness", "Risk basics", "Security terminology"],
-    modules: [
-      "What Is Cybersecurity? Core Concepts",
-      "The CIA Triad: Confidentiality, Integrity, Availability",
-      "Common Threats: Malware, Phishing, Social Engineering",
-      "Introduction to Network & Endpoint Security",
-      "Careers in Cybersecurity",
-    ],
-    prerequisites: "None — this course is designed for complete beginners.",
-    certificate: "Certificate of Completion issued upon finishing all modules and the final quiz.",
-  },
-  {
-    slug: "network-security-fundamentals",
-    icon: "Network",
-    title: "Network Security Fundamentals",
-    shortDescription:
-      "Learn how networks are attacked and defended — firewalls, segmentation, VPNs, and secure architecture design.",
-    level: "Beginner",
-    duration: "5 weeks",
-    objectives: [
-      "Understand TCP/IP and common network vulnerabilities",
-      "Configure firewalls and basic network segmentation",
-      "Learn how VPNs and secure tunnels protect data in transit",
-      "Design a simple secure network architecture",
-    ],
-    skills: ["Firewall configuration", "Network segmentation", "VPN concepts", "Traffic analysis basics"],
-    modules: [
-      "Networking Refresher: TCP/IP, DNS, Routing",
-      "Firewalls & Next-Gen Firewall Concepts",
-      "VPNs and Secure Remote Access",
-      "Network Segmentation & Zero Trust Basics",
-      "Hands-on Lab: Securing a Sample Network",
-    ],
-    prerequisites: "Introduction to Cybersecurity, or basic networking knowledge.",
-    certificate: "Certificate of Completion, with a badge toward the Network Security learning path.",
-  },
-  {
-    slug: "ethical-hacking-penetration-testing",
-    icon: "Bug",
-    title: "Ethical Hacking & Penetration Testing",
-    shortDescription:
-      "Think like an attacker. Learn reconnaissance, exploitation, and reporting using industry-standard penetration testing methodology.",
-    level: "Intermediate",
-    duration: "8 weeks",
-    objectives: [
-      "Follow a structured penetration testing methodology",
-      "Perform reconnaissance and vulnerability scanning",
-      "Exploit common vulnerabilities in a safe lab environment",
-      "Write a professional penetration test report",
-    ],
-    skills: ["Reconnaissance", "Vulnerability scanning", "Exploitation basics", "Reporting"],
-    modules: [
-      "Penetration Testing Methodology & Rules of Engagement",
-      "Reconnaissance & Information Gathering",
-      "Scanning & Vulnerability Assessment",
-      "Exploitation Techniques (Lab-Based)",
-      "Post-Exploitation & Privilege Escalation",
-      "Writing a Professional Pentest Report",
-    ],
-    prerequisites: "Network Security Fundamentals recommended.",
-    certificate: "Certificate of Completion; prepares learners for entry-level pentesting certifications.",
-  },
-  {
-    slug: "web-application-security",
-    icon: "Globe",
-    title: "Web Application Security",
-    shortDescription:
-      "Master the OWASP Top 10 and learn to find and fix the vulnerabilities that put web applications at risk.",
-    level: "Intermediate",
-    duration: "6 weeks",
-    objectives: [
-      "Understand the OWASP Top 10 vulnerabilities in depth",
-      "Identify and remediate injection, XSS, and auth flaws",
-      "Use browser and proxy tools to test web applications",
-      "Apply secure coding practices to prevent common bugs",
-    ],
-    skills: ["OWASP Top 10", "Secure coding", "Web app testing tools", "Vulnerability remediation"],
-    modules: [
-      "Introduction to Web App Architecture & Attack Surface",
-      "Injection Attacks: SQLi, Command Injection",
-      "Cross-Site Scripting (XSS) & CSRF",
-      "Broken Authentication & Session Management",
-      "Hands-on Lab: Testing a Vulnerable Web App",
-    ],
-    prerequisites: "Basic understanding of how web applications work (HTTP, HTML).",
-    certificate: "Certificate of Completion, with a project-based portfolio piece.",
-  },
-  {
-    slug: "endpoint-security",
-    icon: "Laptop",
-    title: "Endpoint Security",
-    shortDescription:
-      "Protect devices at the edge of the network with next-gen antivirus, EDR, and hardened device configurations.",
-    level: "Beginner",
-    duration: "4 weeks",
-    objectives: [
-      "Understand endpoint threats and attack vectors",
-      "Learn the role of EPP and EDR solutions",
-      "Apply device hardening and patch management best practices",
-      "Respond to a simulated endpoint compromise",
-    ],
-    skills: ["EDR concepts", "Device hardening", "Patch management", "Basic incident triage"],
-    modules: [
-      "The Modern Endpoint Threat Landscape",
-      "Antivirus vs. EPP vs. EDR",
-      "Device Hardening & Patch Management",
-      "Disk & Removable Media Encryption",
-      "Simulated Lab: Investigating an Infected Endpoint",
-    ],
-    prerequisites: "Introduction to Cybersecurity recommended.",
-    certificate: "Certificate of Completion upon finishing all modules and the lab exercise.",
-  },
-  {
-    slug: "identity-access-management",
-    icon: "KeyRound",
-    title: "Identity & Access Management (IAM)",
-    shortDescription:
-      "Learn how organizations manage who can access what — authentication, authorization, MFA, and least-privilege design.",
-    level: "Intermediate",
-    duration: "5 weeks",
-    objectives: [
-      "Understand authentication vs. authorization",
-      "Design least-privilege access models",
-      "Implement multi-factor authentication (MFA) concepts",
-      "Learn single sign-on (SSO) and federation basics",
-    ],
-    skills: ["MFA design", "Access control models", "SSO/federation basics", "Identity governance"],
-    modules: [
-      "Authentication, Authorization & Accounting (AAA)",
-      "Multi-Factor Authentication (MFA) Deep Dive",
-      "Role-Based & Least-Privilege Access Control",
-      "Single Sign-On (SSO) & Federation",
-      "Identity Governance & Access Reviews",
-    ],
-    prerequisites: "Introduction to Cybersecurity recommended.",
-    certificate: "Certificate of Completion, aligned with IAM fundamentals used in industry certifications.",
-  },
-  {
-    slug: "cloud-security-fundamentals",
-    icon: "Cloud",
-    title: "Cloud Security Fundamentals",
-    shortDescription:
-      "Secure workloads across AWS, Azure, and GCP with shared responsibility, IAM, and cloud-native security tooling.",
-    level: "Intermediate",
-    duration: "6 weeks",
-    objectives: [
-      "Understand the shared responsibility model",
-      "Configure cloud IAM roles and policies securely",
-      "Secure storage, compute, and networking in the cloud",
-      "Use native cloud security and monitoring tools",
-    ],
-    skills: ["Shared responsibility model", "Cloud IAM", "Cloud network security", "Cloud monitoring basics"],
-    modules: [
-      "Shared Responsibility Model Across Providers",
-      "Cloud Identity & Access Management",
-      "Securing Storage & Compute Resources",
-      "Cloud Network Security & Segmentation",
-      "Monitoring & Logging in the Cloud",
-    ],
-    prerequisites: "Network Security Fundamentals recommended.",
-    certificate: "Certificate of Completion, foundational for cloud security certification tracks.",
-  },
-  {
-    slug: "soc-analyst",
-    icon: "MonitorCheck",
-    title: "Security Operations Center (SOC) Analyst",
-    shortDescription:
-      "Learn to monitor, detect, and respond to threats in real time using SIEM tools and structured triage workflows.",
-    level: "Intermediate",
-    duration: "7 weeks",
-    objectives: [
-      "Understand the role and workflow of a SOC analyst",
-      "Use SIEM tools to monitor and triage alerts",
-      "Apply threat intelligence to investigations",
-      "Escalate and document incidents professionally",
-    ],
-    skills: ["SIEM operations", "Alert triage", "Threat intelligence basics", "Incident documentation"],
-    modules: [
-      "The SOC Analyst Role & Daily Workflow",
-      "Introduction to SIEM Platforms",
-      "Alert Triage & Prioritization",
-      "Using Threat Intelligence in Investigations",
-      "Escalation & Incident Documentation",
-      "Simulated Lab: A Day in the SOC",
-    ],
-    prerequisites: "Network Security Fundamentals and Endpoint Security recommended.",
-    certificate: "Certificate of Completion; prepares learners for entry-level SOC analyst roles.",
-  },
-  {
-    slug: "digital-forensics-incident-response",
-    icon: "Search",
-    title: "Digital Forensics & Incident Response",
-    shortDescription:
-      "Investigate breaches methodically — from evidence collection and chain of custody to root-cause analysis.",
+      "Kenya's first full-time Post-Graduate Program covering Data Science, Business Analytics, and AI in one program — designed with input from IBM, Microsoft, Google, and AWS experts, with live industry projects.",
     level: "Advanced",
-    duration: "8 weeks",
+    duration: "Full-time program — contact admissions for the current schedule.",
     objectives: [
-      "Follow proper evidence handling and chain of custody",
-      "Perform disk, memory, and log forensic analysis",
-      "Build an incident response plan and playbook",
-      "Conduct root-cause analysis and post-incident review",
+      "Launch a career as a Data Scientist, Business Analyst, or AI Engineer in one of the fastest-growing, highest-paid fields",
+      "Learn from a curriculum shaped with input from IBM, Microsoft, Google, and AWS experts",
+      "Build a portfolio through 6 live industry projects",
+      "Access financial aid / scholarship options for meritorious students",
     ],
-    skills: ["Evidence handling", "Forensic analysis", "Incident response planning", "Root-cause analysis"],
+    skills: [
+      "Data Science",
+      "Business Analytics",
+      "Artificial Intelligence",
+      "Machine Learning & Deep Learning",
+      "Predictive & Marketing Analytics",
+      "NLP",
+    ],
     modules: [
-      "Forensics Fundamentals & Chain of Custody",
-      "Disk & File System Forensics",
-      "Memory Forensics Basics",
-      "Log Analysis & Timeline Reconstruction",
-      "Building an Incident Response Plan",
-      "Case Study: End-to-End Incident Investigation",
+      {
+        title: "Full Curriculum",
+        icon: "Info",
+        summary:
+          "The detailed, module-by-module curriculum for this program.",
+        description:
+          "Full module-by-module curriculum available on request — contact admissions@aegis.edu.",
+      },
     ],
-    prerequisites: "SOC Analyst course or equivalent experience recommended.",
-    certificate: "Certificate of Completion, with a hands-on investigation portfolio piece.",
+    prerequisites:
+      "Designed for those launching a career in Data Science, Business Analytics, or AI — no specific prerequisite listed in the course material.",
+    certificate:
+      "Credential details for this program weren't included in the source material provided — please confirm with admissions before publishing.",
   },
   {
-    slug: "data-protection-privacy",
+    slug: "certified-agentic-ai-professional",
+    icon: "Bot",
+    title: "Certified Agentic AI Professional",
+    shortDescription:
+      "Move beyond \"AI as a chatbot.\" Build autonomous, private, governed AI agents that run locally on your own machine — from your first local agent to a fully evaluated capstone system.",
+    level: "Intermediate",
+    duration: "120 hours total, delivered as integrated lab and theory.",
+    objectives: [
+      "Move from prompt-crafting to building autonomous agents that execute real work",
+      "Apply the four core pillars: Privacy-First, Connectivity, Governance, and Evaluation",
+      "Connect agents to real tools — Gmail, Drive, PDFs — via MCP (Model Context Protocol)",
+      "Build, evaluate, and ship a capstone agent with full audit trails, running entirely on your own hardware",
+    ],
+    skills: [
+      "Ollama",
+      "n8n Desktop",
+      "MCP (Model Context Protocol)",
+      "agent-cli",
+      "Human-in-the-Loop (HITL) governance",
+      "AI evaluation & red-teaming",
+    ],
+    modules: [
+      {
+        title: "01 — The Local Ecosystem",
+        icon: "Laptop",
+        summary:
+          "Install and configure the Agentic Stack (Ollama + n8n) and build your first local triage agent.",
+        description:
+          "Install and configure the Agentic Stack (Ollama + n8n) and build your first local triage agent using Micro-models. Outcome: a running local agent on your laptop, no cloud account required.",
+      },
+      {
+        title: "02 — The Connected Agent",
+        icon: "Plug",
+        summary:
+          "Connect agents to Gmail, Drive, and PDFs, and learn Instruction-Data Separation best practices.",
+        description:
+          "Connect agents to Gmail, Drive, and PDFs; learn Instruction-Data Separation and Markdown best practices. Outcome: an agent that reads your inbox and documents and writes clean structured output.",
+      },
+      {
+        title: "03 — Multi-Agent Swarms",
+        icon: "Users",
+        summary:
+          "Orchestrate collaborative agent teams and get introduced to agent-cli shortcuts.",
+        description:
+          "Orchestrate collaborative teams (Researcher + Critic) and get introduced to agent-cli for system-wide shortcuts. Outcome: a two-agent workflow that critiques itself and produces a better result.",
+      },
+      {
+        title: "04 — Governance & Eval",
+        icon: "Scale",
+        summary:
+          "Implement PII filters and HITL gates, then run red-teaming and evaluation exercises.",
+        description:
+          "Implement PII filters and HITL gates; run red-teaming exercises and scientific evals using agent-cli eval. Outcome: a governed agent with an automated eval harness you can re-run any time.",
+      },
+      {
+        title: "05 — The Capstone",
+        icon: "PackageCheck",
+        summary:
+          "Build, test, and package your own documented agent, ready for enterprise use.",
+        description:
+          "Build, test, and package your Domain Partner agent, documented with YAML frontmatter for enterprise readiness. Outcome: a packaged, documented agent ready to hand to your team.",
+      },
+    ],
+    prerequisites:
+      "Built for working professionals and domain experts who want to move beyond using AI as a chatbot. No prior LLM-engineering experience is required.",
+    certificate:
+      "Certified Agentic AI Professional credential on completion of the capstone module.",
+  },
+  {
+    slug: "certified-data-protection-officer",
     icon: "FileLock2",
-    title: "Data Protection & Privacy (GDPR, ISO 27001)",
+    title: "Certified Data Protection Officer (CDPO)",
     shortDescription:
-      "Navigate global data protection law and information security standards to keep organizations compliant.",
+      "Build the skills to serve as a Data Protection Officer under Kenya's Data Protection Act 2019 and GDPR — from DPIAs and data mapping to breach response and compliance audits.",
     level: "Intermediate",
-    duration: "5 weeks",
+    duration: "10-module program — contact admissions for the current schedule.",
     objectives: [
-      "Understand core GDPR principles and data subject rights",
-      "Learn the structure of the ISO 27001 framework",
-      "Conduct a basic data protection impact assessment",
-      "Design policies that satisfy common compliance requirements",
+      "Understand Kenya's Data Protection Act 2019 and GDPR compliance frameworks",
+      "Learn the DPO's role: informing, advising, monitoring, and liaising with regulators",
+      "Run Data Protection Impact Assessments (DPIAs) and personal data audits",
+      "Manage data breaches from identification through root-cause analysis and reporting to the ODPC",
     ],
-    skills: ["GDPR fundamentals", "ISO 27001 structure", "Data protection impact assessment", "Policy writing"],
+    skills: [
+      "Data Protection Act / GDPR compliance",
+      "DPIA",
+      "Breach management",
+      "Data mapping",
+      "PII identification",
+      "Regulatory reporting",
+    ],
     modules: [
-      "Introduction to Data Protection Law & GDPR",
-      "Data Subject Rights & Lawful Basis for Processing",
-      "ISO 27001: Structure & Control Domains",
-      "Conducting a Data Protection Impact Assessment",
-      "Writing Compliant Data Protection Policies",
+      {
+        title: "Module 1: Fundamentals of Privacy",
+        icon: "BookOpen",
+        summary:
+          "The evolution of privacy and Kenya's Data Protection Law framework.",
+        description:
+          "Evolution of privacy, defining fundamentals of informational privacy and data protection, the framework of Data Protection Laws in Kenya, legislative journey and global benchmarks, and the constitutional role of the ODPC.",
+      },
+      {
+        title: "Module 2: Principles of Data Protection & Rights",
+        icon: "Scale",
+        summary:
+          "Lawful basis for processing, children's data, and controller/processor roles.",
+        description:
+          "Understanding the principles of Data Protection, the lawful basis for processing personal data (with a technical lab guide on HRM systems), children's personal data, the role of Data Controllers & Data Processors, and use of personal data for commercial purposes.",
+      },
+      {
+        title: "Module 3: Data Subjects' Rights",
+        icon: "UserCheck",
+        summary:
+          "Rights overview, data portability, and Data Subject Access Requests.",
+        description:
+          "Data subjects' rights, data portability and automated decision-making, and Data Subject Access Rights Requests (DSAR).",
+      },
+      {
+        title: "Module 4: Data Protection Impact Assessment (DPIA)",
+        icon: "ClipboardList",
+        summary:
+          "DPIA triggers, methodology, and privacy by design and default.",
+        description:
+          "Data Protection Impact Assessment triggers (with a technical lab guide), when a DPIA is required, DPIA methodology, privacy by design and default, and the DPIA sign-off process.",
+      },
+      {
+        title: "Module 5: The Data Protection Officer",
+        icon: "Briefcase",
+        summary:
+          "DPO appointment, roles, responsibilities, and enforcement.",
+        description:
+          "DPO appointment and institutional standing, Data Protection Officer roles and responsibilities, and enforcements and penalties.",
+      },
+      {
+        title: "Module 6: Cross-Border Transfer & Governance",
+        icon: "Globe2",
+        summary:
+          "Cross-border data flow, localization, and AI in data protection.",
+        description:
+          "Cross-border data flow, data localization mandates, and privacy & the role of Artificial Intelligence in data protection.",
+      },
+      {
+        title: "Module 7: Breach Management & Enforcement",
+        icon: "AlertTriangle",
+        summary:
+          "Incident response, containment, and reporting to the regulator.",
+        description:
+          "Incident Response Plan overview, data breach management, identification and containment, complaints from affected parties, Root Cause Analysis (RCA), and reporting to the authority (ODPC).",
+      },
+      {
+        title: "Module 8: Data Subjects Audit",
+        icon: "Search",
+        summary:
+          "Personal data audits, identifying PII, and Data Flow Diagrams.",
+        description:
+          "Personal Data Audit overview, sections of a Data Protection and Compliance Audit, ways to identify PII and sensitive data, Data Flow Diagrams (DFD), and the road to full compliance.",
+      },
+      {
+        title: "Module 9: Data Mapping & Security",
+        icon: "Map",
+        summary:
+          "Hands-on data mapping, migration, and security best practices.",
+        description:
+          "Data mapping (hands-on technical labs), data mapping methodology, migration and compliance, integration with existing systems, and best practices on enhancing data security.",
+      },
+      {
+        title: "Module 10: Exam Preparation",
+        icon: "GraduationCap",
+        summary: "Final review and the certification exam.",
+        description:
+          "Preparation for exams. Final exam requires an 85% pass mark, followed by certification.",
+      },
     ],
-    prerequisites: "None, though familiarity with basic IT concepts helps.",
-    certificate: "Certificate of Completion, useful groundwork for formal ISO 27001 certification paths.",
-  },
-  {
-    slug: "risk-management-governance",
-    icon: "ClipboardList",
-    title: "Risk Management & Governance",
-    shortDescription:
-      "Learn how organizations identify, assess, and manage cybersecurity risk at the governance and leadership level.",
-    level: "Intermediate",
-    duration: "5 weeks",
-    objectives: [
-      "Understand risk identification and assessment methodologies",
-      "Build a basic risk register and treatment plan",
-      "Learn how security governance frameworks are structured",
-      "Communicate risk effectively to leadership and stakeholders",
-    ],
-    skills: ["Risk assessment", "Risk registers", "Governance frameworks", "Stakeholder communication"],
-    modules: [
-      "Foundations of Risk Management",
-      "Risk Identification & Assessment Methods",
-      "Building a Risk Register & Treatment Plan",
-      "Security Governance Frameworks Overview",
-      "Communicating Risk to Leadership",
-    ],
-    prerequisites: "Introduction to Cybersecurity recommended.",
-    certificate: "Certificate of Completion, aligned with governance concepts used in GRC roles.",
-  },
-  {
-    slug: "security-awareness-compliance",
-    icon: "GraduationCap",
-    title: "Security Awareness & Compliance Training",
-    shortDescription:
-      "Learn to design and deliver security awareness programs that actually change employee behavior.",
-    level: "Beginner",
-    duration: "3 weeks",
-    objectives: [
-      "Understand the human factors behind security incidents",
-      "Design an effective security awareness training program",
-      "Build phishing simulation and reporting workflows",
-      "Measure and improve program effectiveness over time",
-    ],
-    skills: ["Awareness program design", "Phishing simulation basics", "Behavior-change training", "Compliance reporting"],
-    modules: [
-      "Why Security Awareness Programs Matter",
-      "Designing Engaging Training Content",
-      "Phishing Simulations & Reporting Culture",
-      "Measuring Program Effectiveness",
-      "Compliance Reporting for Leadership & Auditors",
-    ],
-    prerequisites: "None.",
-    certificate: "Certificate of Completion upon finishing all modules and the final assessment.",
+    prerequisites:
+      "Open to managers and consultants, aspiring DPOs, Risk & Compliance Officers, HR, health professionals, marketing teams, and school administrators — no formal prerequisite listed.",
+    certificate:
+      "Certification awarded on completion, following a final exam (85% pass mark).",
   },
 ];
 
@@ -350,7 +261,7 @@ export const TESTIMONIALS = [
 export const FAQS = [
   {
     q: "Do I need prior experience to start?",
-    a: "No — Introduction to Cybersecurity and Security Awareness Training are built for complete beginners. Other courses list any recommended prerequisites on their course page.",
+    a: "It depends on the program — check the Prerequisites section on each course’s page. Several of our programs are open to professionals without a technical background.",
   },
   {
     q: "Are the courses self-paced?",

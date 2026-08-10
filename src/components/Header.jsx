@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import {
   Mail,
@@ -29,6 +30,8 @@ const NAV_LINKS = [
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const pathname = usePathname();
+  const isTraining = pathname?.startsWith("/cybersecurity-training");
 
   return (
     <header>
@@ -37,18 +40,18 @@ export default function Header() {
         <div className="container flex flex-col sm:flex-row items-center justify-between gap-2 py-2">
           <div className="flex items-center gap-6">
             <a
-              href="mailto:info@networkintelligence.co.ke"
+              href={isTraining ? "mailto:admissions@aegis.edu" : "mailto:info@networkintelligence.co.ke"}
               className="flex items-center gap-2 hover:text-white transition-colors"
             >
               <Mail size={14} className="text-gold" />
-              info@networkintelligence.co.ke
+              {isTraining ? "admissions@aegis.edu" : "info@networkintelligence.co.ke"}
             </a>
             <a
-              href="tel:0772378393"
+              href={isTraining ? "tel:0727589335" : "tel:0772378393"}
               className="hidden sm:flex items-center gap-2 hover:text-white transition-colors"
             >
               <Phone size={14} className="text-gold" />
-              0772-378393/020-3504199.
+              {isTraining ? "0727-589335" : "0772-378393/020-3504199."}
             </a>
           </div>
           <div className="flex items-center gap-4">
@@ -68,39 +71,55 @@ export default function Header() {
       {/* Logo / location / hours / CTA */}
       <div className="bg-white border-b">
         <div className="container flex flex-wrap items-center justify-between gap-4 py-4">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/images/logo.jpg"
-              alt="Network Intelligence Technologies Limited"
-              width={212}
-              height={96}
-              className="h-20 w-auto"
-              priority
-            />
-          </Link>
+          {isTraining ? (
+            <Link
+              href="/cybersecurity-training"
+              className="flex flex-col leading-none"
+            >
+              <span className="text-2xl md:text-3xl font-extrabold tracking-wide text-navy">
+                AEGIS<span className="text-gold">.</span>
+              </span>
+              <span className="text-[11px] md:text-xs font-semibold tracking-[0.2em] text-gray-500 uppercase">
+                School of Science
+              </span>
+            </Link>
+          ) : (
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/logo.jpg"
+                alt="Network Intelligence Technologies Limited"
+                width={212}
+                height={96}
+                className="h-20 w-auto"
+                priority
+              />
+            </Link>
+          )}
 
-          <div className="hidden md:flex items-center gap-8">
-            <div className="flex items-center gap-2 text-sm text-gray-700">
-              <Globe size={20} className="text-gold" />
-              <div>
-                <p className="font-semibold text-navy">LOCATION</p>
-                <p>Morrison House, 4th Floor</p>
+          {!isTraining && (
+            <div className="hidden md:flex items-center gap-8">
+              <div className="flex items-center gap-2 text-sm text-gray-700">
+                <Globe size={20} className="text-gold" />
+                <div>
+                  <p className="font-semibold text-navy">LOCATION</p>
+                  <p>Morrison House, 4th Floor</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-gray-700">
+                <Clock size={20} className="text-gold" />
+                <div>
+                  <p className="font-semibold text-navy">OPENING HOURS</p>
+                  <p>8.00 am to 4.00 pm</p>
+                </div>
               </div>
             </div>
-            <div className="flex items-center gap-2 text-sm text-gray-700">
-              <Clock size={20} className="text-gold" />
-              <div>
-                <p className="font-semibold text-navy">OPENING HOURS</p>
-                <p>8.00 am to 4.00 pm</p>
-              </div>
-            </div>
-          </div>
+          )}
 
           <Link
-            href="/contact"
+            href={isTraining ? "/cybersecurity-training#courses" : "/contact"}
             className="bg-navy text-white text-sm font-semibold px-5 py-3 rounded hover:bg-navy-light transition-colors"
           >
-            Request For a Quote
+            {isTraining ? "Browse Courses" : "Request For a Quote"}
           </Link>
         </div>
       </div>

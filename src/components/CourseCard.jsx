@@ -12,6 +12,8 @@ import {
   FileLock2,
   ClipboardList,
   GraduationCap,
+  BarChart3,
+  Bot,
 } from "lucide-react";
 
 const ICONS = {
@@ -27,6 +29,8 @@ const ICONS = {
   FileLock2,
   ClipboardList,
   GraduationCap,
+  BarChart3,
+  Bot,
 };
 
 const LEVEL_STYLES = {

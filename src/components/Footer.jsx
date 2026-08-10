@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const LINKS = [
   { href: "/", label: "Home" },
@@ -11,6 +14,9 @@ const LINKS = [
 ];
 
 export default function Footer() {
+  const pathname = usePathname();
+  const isTraining = pathname?.startsWith("/cybersecurity-training");
+
   return (
     <footer className="bg-navy-dark text-gray-300">
       <div className="max-w-6xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-4 gap-10 py-16">
@@ -47,18 +53,25 @@ export default function Footer() {
           <p className="text-sm mb-4">Mombasa Road, Nairobi-Kenya.</p>
           <p className="text-sm mb-1">
             Mobile:{" "}
-            <a href="tel:0772378393" className="hover:text-gold">
-              0772-378393
+            <a
+              href={isTraining ? "tel:0727589335" : "tel:0772378393"}
+              className="hover:text-gold"
+            >
+              {isTraining ? "0727-589335" : "0772-378393"}
             </a>
-            . 020-3504199.
+            {!isTraining && ". 020-3504199."}
           </p>
           <p className="text-sm">
             Email:{" "}
             <a
-              href="mailto:nit.intelligence@gmail.com"
+              href={
+                isTraining
+                  ? "mailto:admissions@aegis.edu"
+                  : "mailto:nit.intelligence@gmail.com"
+              }
               className="hover:text-gold"
             >
-              nit.intelligence@gmail.com
+              {isTraining ? "admissions@aegis.edu" : "nit.intelligence@gmail.com"}
             </a>
           </p>
         </div>
