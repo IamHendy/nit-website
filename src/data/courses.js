@@ -2,6 +2,7 @@ export const COURSES = [
   {
     slug: "pgp-data-science-business-analytics-ai",
     icon: "BarChart3",
+    image: "/images/courses/data-science-edited.jpg",
     title: "PGP in Data Science, Business Analytics & AI",
     shortDescription:
       "Kenya's first full-time Post-Graduate Program covering Data Science, Business Analytics, and AI in one program — designed with input from IBM, Microsoft, Google, and AWS experts, with live industry projects.",
@@ -125,6 +126,7 @@ export const COURSES = [
   {
     slug: "certified-agentic-ai-professional",
     icon: "Bot",
+    image: "/images/courses/agentic-ai-edited.jpg",
     title: "Certified Agentic AI Professional",
     shortDescription:
       "Move beyond \"AI as a chatbot.\" Build autonomous, private, governed AI agents that run locally on your own machine — from your first local agent to a fully evaluated capstone system.",
@@ -216,6 +218,7 @@ export const COURSES = [
   {
     slug: "certified-data-protection-officer",
     icon: "FileLock2",
+    image: "/images/courses/data-protection-edited.jpg",
     title: "Certified Data Protection Officer (CDPO)",
     shortDescription:
       "Build the skills to serve as a Data Protection Officer under Kenya's Data Protection Act 2019 and GDPR — from DPIAs and data mapping to breach response and compliance audits.",
