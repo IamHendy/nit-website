@@ -68,7 +68,7 @@ export default function HeroCarousel() {
             href="/cybersecurity-training"
             className="bg-gold text-navy px-8 py-3 font-semibold tracking-wide hover:bg-gold-dark transition-colors"
           >
-            Learn Cybersecurity
+            Learn 
           </Link>
         </div>
 

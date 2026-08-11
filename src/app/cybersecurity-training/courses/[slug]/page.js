@@ -1,8 +1,35 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Check, Clock, Award, ChevronRight } from "lucide-react";
+import {
+  Check,
+  Clock,
+  Award,
+  ChevronRight,
+  TrendingUp,
+  DollarSign,
+  Briefcase,
+  Lock,
+  Plug,
+  Scale,
+  Target,
+  ShieldCheck,
+  Users,
+} from "lucide-react";
 import { COURSES, getCourseBySlug, INSTRUCTORS, TESTIMONIALS, FAQS } from "@/data/courses";
 import ModulesGrid from "@/components/ModulesGrid";
+
+const WHY_ICONS = {
+  TrendingUp,
+  Award,
+  Briefcase,
+  DollarSign,
+  Lock,
+  Plug,
+  Scale,
+  Target,
+  ShieldCheck,
+  Users,
+};
 
 export function generateStaticParams() {
   return COURSES.map((c) => ({ slug: c.slug }));
@@ -60,6 +87,38 @@ export default function CourseDetailPage({ params }) {
 
       <div className="container py-16 grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-14">
         <div className="space-y-14">
+          {/* Why This Course */}
+          {course.whyThisCourse && (
+            <div>
+              <h2 className="text-xl font-bold text-gray-900 mb-5">
+                Why This Course
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {course.whyThisCourse.map((w) => {
+                  const Icon = WHY_ICONS[w.icon] || Award;
+                  return (
+                    <div
+                      key={w.title}
+                      className="rounded-lg border border-gray-100 bg-gray-50 p-5 flex gap-4"
+                    >
+                      <div className="w-10 h-10 rounded-full bg-navy/5 border border-navy/10 flex items-center justify-center shrink-0">
+                        <Icon size={18} className="text-navy" />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-gray-900 mb-1">
+                          {w.title}
+                        </p>
+                        <p className="text-sm text-gray-600 leading-relaxed">
+                          {w.text}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
           {/* Learning Objectives */}
           <div>
             <h2 className="text-xl font-bold text-gray-900 mb-5">

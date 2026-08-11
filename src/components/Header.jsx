@@ -22,7 +22,7 @@ const NAV_LINKS = [
   { href: "/about", label: "ABOUT US" },
   { href: "/services", label: "SERVICES" },
   { href: "/solutions", label: "SOLUTIONS" },
-  { href: "/cybersecurity-training", label: "LEARN CYBERSECURITY" },
+  { href: "/cybersecurity-training", label: "LEARN" },
   { href: "/contact", label: "CONTACT" },
   { href: "/news", label: "NEWS" },
 ];

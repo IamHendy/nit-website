@@ -19,6 +19,15 @@ import {
   Search,
   Map,
   GraduationCap,
+  Database,
+  Terminal,
+  Table,
+  Rocket,
+  Layers,
+  BarChart3,
+  LineChart,
+  Sparkles,
+  Building2,
 } from "lucide-react";
 
 const ICONS = {
@@ -37,6 +46,15 @@ const ICONS = {
   Search,
   Map,
   GraduationCap,
+  Database,
+  Terminal,
+  Table,
+  Rocket,
+  Layers,
+  BarChart3,
+  LineChart,
+  Sparkles,
+  Building2,
 };
 
 export default function ModulesGrid({ modules }) {

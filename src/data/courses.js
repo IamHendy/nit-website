@@ -7,6 +7,28 @@ export const COURSES = [
       "Kenya's first full-time Post-Graduate Program covering Data Science, Business Analytics, and AI in one program — designed with input from IBM, Microsoft, Google, and AWS experts, with live industry projects.",
     level: "Advanced",
     duration: "Full-time program — contact admissions for the current schedule.",
+    whyThisCourse: [
+      {
+        icon: "TrendingUp",
+        title: "High-Demand Field",
+        text: "50,000+ open Data Scientist roles and 49,000+ Business Analytics roles on LinkedIn — one of the fastest-growing, highest-paid career paths today.",
+      },
+      {
+        icon: "Award",
+        title: "Industry-Built Curriculum",
+        text: "Program designed with input from IBM, Microsoft, Google, and AWS experts — Kenya's first program of its kind.",
+      },
+      {
+        icon: "Briefcase",
+        title: "Real Portfolio Projects",
+        text: "6 live industry projects give you a real portfolio, not just a certificate, by the time you graduate.",
+      },
+      {
+        icon: "DollarSign",
+        title: "Strong Earning Potential",
+        text: "Freshers can expect KES 100,000–500,000, with experienced professionals seeing pay increases of up to 500%.",
+      },
+    ],
     objectives: [
       "Launch a career as a Data Scientist, Business Analyst, or AI Engineer in one of the fastest-growing, highest-paid fields",
       "Learn from a curriculum shaped with input from IBM, Microsoft, Google, and AWS experts",
@@ -23,12 +45,76 @@ export const COURSES = [
     ],
     modules: [
       {
-        title: "Full Curriculum",
-        icon: "Info",
+        title: "Introduction to Data Science",
+        icon: "Database",
         summary:
-          "The detailed, module-by-module curriculum for this program.",
+          "What Data Science is, the DS lifecycle, and your first Python syntax.",
         description:
-          "Full module-by-module curriculum available on request — contact admissions@aegis.edu.",
+          "What is Data Science? Overview & lifecycle. Roles in DS (Analyst vs Scientist) & tools overview. Python syntax: variables, print(), data types (int, str, float, bool).",
+      },
+      {
+        title: "Python Fundamentals",
+        icon: "Terminal",
+        summary:
+          "Programming logic and control structures — lists, conditionals, loops, and functions.",
+        description:
+          "Learn basic programming logic and control structures in Python: lists and indexing, conditional logic (if, elif, else), loops (for, while), functions (defining, calling, parameters), and error messages + debugging basics.",
+      },
+      {
+        title: "Data Structures with Pandas",
+        icon: "Table",
+        summary:
+          "Read, clean, and manipulate real datasets using pandas.",
+        description:
+          "Learn how to read, clean, and manipulate datasets using pandas: loading CSVs & viewing (.head(), .columns), cleaning data (removing nulls, renaming columns), selecting rows/columns, changing data types, and exporting clean data to CSV.",
+      },
+      {
+        title: "Transformation Foundations",
+        icon: "Rocket",
+        summary:
+          "Why traditional businesses are being disrupted, and East Africa's analytics + AI opportunity.",
+        description:
+          "Why traditional businesses are being disrupted and how analytics + AI create competitive advantage. East Africa opportunities & barriers: fintech leapfrogging, agri value chains, logistics inefficiencies, data silos, power/connectivity realities, skills gaps. From pilots to scale — moving beyond experimentation to production value.",
+      },
+      {
+        title: "The Modern Analytics Stack & Data Foundations",
+        icon: "Layers",
+        summary:
+          "Ingestion, storage, and governance — then a hands-on East African dataset project.",
+        description:
+          "Ingestion, storage (warehouses), transformation, semantic layers, and consumption. Practical data modelling, quality, and governance for African enterprise realities. Tools intro: SQL mastery, Python for cleaning/exploration, dbt-style transformations, cloud data platforms. Hands-on: build a clean analytical dataset from sample East African transaction / sales / supply-chain data.",
+      },
+      {
+        title: "AI-Enhanced Business Intelligence & Self-Service Analytics",
+        icon: "BarChart3",
+        summary:
+          "Build dashboards that drive decisions, using Power BI Copilot and Tableau AI.",
+        description:
+          "Dashboards that drive decisions, not just report history. Power BI Copilot / Fabric and Tableau AI features: natural-language queries, automated insights, anomaly detection, narrative generation.",
+      },
+      {
+        title: "Predictive Analytics & Classical Machine Learning",
+        icon: "LineChart",
+        summary:
+          "Forecasting demand, credit risk, and crop yields with Python — East Africa case studies.",
+        description:
+          "From descriptive to predictive: forecasting demand, credit risk, customer lifetime value, equipment failure, and crop yields. Core techniques with Python (regression, classification, time-series, clustering), kept practical and interpretable. East Africa cases: M-Pesa-style transaction scoring, agri market price prediction, supply-chain predictive maintenance, retail assortment optimisation.",
+      },
+      {
+        title: "Generative AI & Emerging Agentic Capabilities",
+        icon: "Sparkles",
+        summary:
+          "RAG, agentic AI concepts, and responsible use of generative AI in the workplace (Weeks 7–8).",
+        description:
+          "Generative AI for knowledge work: summarisation, report writing, code generation, customer service augmentation, internal search (RAG). Agentic AI concepts — systems that analyse and act with human oversight. Prompt engineering, grounding with enterprise data, and responsible use: hallucinations, IP, data privacy, and sovereignty. Hands-on: build a RAG prototype or a simple agentic workflow.",
+      },
+      {
+        title: "Industry Deep-Dives & Implementation Playbooks",
+        icon: "Building2",
+        summary:
+          "Sector tracks, ROI measurement, and a capstone 90-day implementation plan.",
+        description:
+          "Sector tracks (participants choose or rotate): financial services & fintech, agriculture & agribusiness, retail/manufacturing/supply chain, or telco & digital platforms. Change management, talent models, vendor selection, and ROI measurement. Capstone: a team project solving a real corporate challenge, presenting a 90-day implementation plan to peers and facilitators.",
       },
     ],
     prerequisites:
@@ -44,6 +130,28 @@ export const COURSES = [
       "Move beyond \"AI as a chatbot.\" Build autonomous, private, governed AI agents that run locally on your own machine — from your first local agent to a fully evaluated capstone system.",
     level: "Intermediate",
     duration: "120 hours total, delivered as integrated lab and theory.",
+    whyThisCourse: [
+      {
+        icon: "Lock",
+        title: "Privacy-First",
+        text: "Use Ollama and n8n Desktop to keep prompts, data, and outputs on your machine — zero cloud leakage.",
+      },
+      {
+        icon: "Plug",
+        title: "Connectivity",
+        text: "Real-world tool integration via MCP (Model Context Protocol) — plug agents into Gmail, Drive, PDFs, and your stack.",
+      },
+      {
+        icon: "Scale",
+        title: "Governance",
+        text: "Rigorous focus on Human-in-the-Loop (HITL) approvals, PII filters, and full audit trails on every action.",
+      },
+      {
+        icon: "Target",
+        title: "Evaluation",
+        text: "Move from \"vibes\" to evaluation — quantitative benchmarks, regression suites, and red-team exercises.",
+      },
+    ],
     objectives: [
       "Move from prompt-crafting to building autonomous agents that execute real work",
       "Apply the four core pillars: Privacy-First, Connectivity, Governance, and Evaluation",
@@ -113,6 +221,23 @@ export const COURSES = [
       "Build the skills to serve as a Data Protection Officer under Kenya's Data Protection Act 2019 and GDPR — from DPIAs and data mapping to breach response and compliance audits.",
     level: "Intermediate",
     duration: "10-module program — contact admissions for the current schedule.",
+    whyThisCourse: [
+      {
+        icon: "TrendingUp",
+        title: "A Growing, High-Stakes Field",
+        text: "GRC and data protection are gaining increasing importance — and the risks of non-compliance (reputational, financial, legal) are rising just as fast.",
+      },
+      {
+        icon: "ShieldCheck",
+        title: "Regulator-Aligned Training",
+        text: "An AEGIS/ODPC-aligned course built to equip you as a DPO under Kenya's Data Protection Act and GDPR compliance frameworks.",
+      },
+      {
+        icon: "Users",
+        title: "Built for Real Practitioners",
+        text: "Through practical exercises, master the DPO role: informing, advising, monitoring compliance, and liaising with regulators.",
+      },
+    ],
     objectives: [
       "Understand Kenya's Data Protection Act 2019 and GDPR compliance frameworks",
       "Learn the DPO's role: informing, advising, monitoring, and liaising with regulators",
@@ -221,17 +346,17 @@ export function getCourseBySlug(slug) {
 
 export const INSTRUCTORS = [
   {
-    name: "Amina Yusuf",
+    name: "Derrick Wanjawa",
     title: "Lead Cybersecurity Instructor, CISSP",
     bio: "Over 10 years securing enterprise networks across East Africa before moving into full-time security training.",
   },
   {
-    name: "David Mwangi",
+    name: "Joseph Kitheka",
     title: "Penetration Testing Instructor, OSCP",
     bio: "Former red-team consultant specializing in web application and network penetration testing.",
   },
   {
-    name: "Grace Wanjiru",
+    name: "Hendrica Ogema",
     title: "GRC & Compliance Instructor, ISO 27001 Lead Auditor",
     bio: "Helps organizations navigate data protection law and build practical, auditable security programs.",
   },
